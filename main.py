@@ -1,3 +1,5 @@
+import sys
+import os
 import PyPDF2
 from docx import Document
 from docx.oxml.ns import nsdecls
@@ -7,6 +9,7 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 import tkinter as tk
 from tkinter import filedialog, messagebox
 import os
+
 
 
 # Função que lê todas as páginas do PDF
@@ -299,4 +302,3 @@ def criar_interface():
 
 if __name__ == "__main__":
     criar_interface()
-    
