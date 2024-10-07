@@ -42,6 +42,7 @@ def extrair_dados_necessarios(dados_pdf):
     coletando_pessoa_envolvida = False
 
     for linha in linhas:
+        print(linha)
         # Converter a linha para minúsculas para facilitar a busca
         linha_lower = linha.lower()
         if "endereço:" in linha_lower:
@@ -57,8 +58,8 @@ def extrair_dados_necessarios(dados_pdf):
             if len(partes) > 1:
                 odin = partes[1].strip()
 
-        if "requisitante:" in linha_lower:
-            partes = linha.split("Requisitante:")
+        if "autoridade" in linha_lower:
+            partes = linha.split("Autoridade:")
             if len(partes) > 1:
                 requisitante = partes[1].strip()
 
